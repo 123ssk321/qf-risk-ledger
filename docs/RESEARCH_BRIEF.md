@@ -18,4 +18,8 @@ Independent price/Greek checks, position-to-portfolio reconciliation, shock P&L,
 
 A narrow options risk review tool is plausible; a buyer, operating value, and data entitlement are unvalidated. Stop the product claim if users cannot complete a concrete review or the pricing/reconciliation checks fail. Keep a validated local engine as a CV artifact.
 
-Planning source: quant-finance/QUANT_QUICK_PATHS.md, assessed 19 October 2026. Source links and data cautions are in that report.
+## Source links and data cautions
+
+[Cboe's historical option quote product](https://datashop.cboe.com/option-quote-intervals) describes licensed quote data and sample availability. [OIC's option quote tool](https://prd-web.optionseducation.org/toolsoptionquotes/options-quotes) describes delayed quotes. Check terms, timestamps, contract specifications and redistribution rights before using either source.
+
+Planning assessment: 19 October 2026.
