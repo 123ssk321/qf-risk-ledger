@@ -1,0 +1,471 @@
+{
+  "project_slug": "risk-ledger",
+  "first_public_result_month": 4,
+  "total_hours": 312,
+  "reserve_hours": 120,
+  "status": "queued",
+  "milestones": [
+    {
+      "id": "QR-M1",
+      "title": "Scope, rights and model contract",
+      "description": "Relative to explicit activation: Months 1–2; 32 task hours + 20 reserve; cumulative 52 hours. Tasks QR-001–QR-004. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 1–2",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 52
+    },
+    {
+      "id": "QR-M2",
+      "title": "Pricer and ledger slice",
+      "description": "Relative to explicit activation: Months 1–2; 32 task hours + 20 reserve; cumulative 104 hours. Tasks QR-005–QR-008. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 1–2",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 104
+    },
+    {
+      "id": "QR-M3",
+      "title": "First public risk review alpha",
+      "description": "Relative to explicit activation: Month 4; 32 task hours + 20 reserve; cumulative 156 hours. Tasks QR-009–QR-012. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Month 4",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 156
+    },
+    {
+      "id": "QR-M4",
+      "title": "Scenarios and independent validation",
+      "description": "Relative to explicit activation: Months 5–7; 32 task hours + 20 reserve; cumulative 208 hours. Tasks QR-013–QR-016. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 5–7",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 208
+    },
+    {
+      "id": "QR-M5",
+      "title": "Reliability and review workflow",
+      "description": "Relative to explicit activation: Months 6–8; 32 task hours + 20 reserve; cumulative 260 hours. Tasks QR-017–QR-020. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 6–8",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 260
+    },
+    {
+      "id": "QR-M6",
+      "title": "Stable case study and product decision",
+      "description": "Relative to explicit activation: Months 7–9; 32 task hours + 20 reserve; cumulative 312 hours. Tasks QR-021–QR-024. Exit requires reviewed evidence for each task and a continue/narrow/park decision. Dates stay blank while queued.",
+      "window": "Months 7–9",
+      "work_hours": 32,
+      "reserve_hours": 20,
+      "cumulative_hours": 312
+    }
+  ],
+  "issues": [
+    {
+      "id": "QR-001",
+      "title": "Define the review decision",
+      "body": "## Goal\nDefine the review decision for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Specify user question, inputs, outputs and excluded claims.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/PRODUCT_CONTRACT.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nOne review question and explicit non-live boundary are testable. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nNone beyond activation. Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M1",
+      "depends_on": [],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QR-002",
+      "title": "Define instrument and position schema",
+      "body": "## Goal\nDefine instrument and position schema for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Specify option style, multiplier, expiry, rate, dividend and signed quantity.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/SCHEMA.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nUnits, timezone and missing-field behavior are explicit. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-001 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M1",
+      "depends_on": [
+        "QR-001"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QR-003",
+      "title": "Record data and model rights",
+      "body": "## Goal\nRecord data and model rights for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Inspect quote, pricing library and sample licenses with synthetic fallback.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/DATA_RIGHTS.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nEach asset has source, permitted use and fallback. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-002 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M1",
+      "depends_on": [
+        "QR-002"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QR-004",
+      "title": "Set laptop and correctness budget",
+      "body": "## Goal\nSet laptop and correctness budget for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Define bounded book size, runtime and memory smoke checks.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/RESOURCE_BUDGET.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nBudget can be measured without a feed. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-003 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M1",
+      "depends_on": [
+        "QR-003"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:definition"
+      ],
+      "phase": "definition"
+    },
+    {
+      "id": "QR-005",
+      "title": "Build deterministic book generator",
+      "body": "## Goal\nBuild deterministic book generator for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Generate positions and known exposure edge cases from seeds.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/synthetic_book.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nSame seed reproduces identical book and edge cases. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-004 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M2",
+      "depends_on": [
+        "QR-004"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QR-006",
+      "title": "Implement contract validation",
+      "body": "## Goal\nImplement contract validation for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Reject invalid strikes, expiries, multipliers and timestamps.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/contracts.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nInvalid contracts fail with named field and reason. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-005 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M2",
+      "depends_on": [
+        "QR-005"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QR-007",
+      "title": "Implement reference pricer",
+      "body": "## Goal\nImplement reference pricer for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Price supported European contracts and state assumptions.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/pricing.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nKnown limiting cases and reference values agree within tolerance. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-006 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M2",
+      "depends_on": [
+        "QR-006"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QR-008",
+      "title": "Implement Greek checks",
+      "body": "## Goal\nImplement Greek checks for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Compare analytic Greeks with finite differences over bounded grids.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/test_greeks.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nTolerance and unstable regions are declared. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-007 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M2",
+      "depends_on": [
+        "QR-007"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:prototype"
+      ],
+      "phase": "prototype"
+    },
+    {
+      "id": "QR-009",
+      "title": "Build position ledger",
+      "body": "## Goal\nBuild position ledger for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Aggregate signed cash and contract exposures with units.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/ledger.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nPortfolio total equals sum of position contributions. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-008 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M3",
+      "depends_on": [
+        "QR-008"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QR-010",
+      "title": "Add quote freshness semantics",
+      "body": "## Goal\nAdd quote freshness semantics for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Carry source and as-of timestamp through every valuation.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/quotes.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nStale and missing quotes cannot appear current. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-009 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M3",
+      "depends_on": [
+        "QR-009"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QR-011",
+      "title": "Build local review CLI",
+      "body": "## Goal\nBuild local review CLI for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Load generated book and show top exposures and warnings.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/cli.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nA new user can replay one review from README. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-010 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M3",
+      "depends_on": [
+        "QR-010"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QR-012",
+      "title": "Publish first alpha report",
+      "body": "## Goal\nPublish first alpha report for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Explain synthetic inputs, checks, failures and measured runtime.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/alpha.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nRunnable artifact and limits are public at month four. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-011 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M3",
+      "depends_on": [
+        "QR-011"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P1",
+        "status:queued",
+        "phase:public-alpha"
+      ],
+      "phase": "public-alpha"
+    },
+    {
+      "id": "QR-013",
+      "title": "Implement spot shock matrix",
+      "body": "## Goal\nImplement spot shock matrix for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Reprice positions under declared spot shocks.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/scenarios.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nZero shock reconciles to base valuation. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-012 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M4",
+      "depends_on": [
+        "QR-012"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QR-014",
+      "title": "Implement volatility shocks",
+      "body": "## Goal\nImplement volatility shocks for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Reprice with declared volatility term and surface assumptions.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/test_scenarios.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nScenario order does not silently change results. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-013 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M4",
+      "depends_on": [
+        "QR-013"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QR-015",
+      "title": "Reconcile approximate P&L",
+      "body": "## Goal\nReconcile approximate P&L for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Compare Greek approximation with full repricing across shocks.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/reconciliation.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nResiduals and failure regions are reported. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-014 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M4",
+      "depends_on": [
+        "QR-014"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QR-016",
+      "title": "Compare pricing oracle",
+      "body": "## Goal\nCompare pricing oracle for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Check against an independent library or published fixtures.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `tests/test_oracle.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nDisagreements are classified, not hidden. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-015 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M4",
+      "depends_on": [
+        "QR-015"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:evaluation"
+      ],
+      "phase": "evaluation"
+    },
+    {
+      "id": "QR-017",
+      "title": "Add reviewable evidence links",
+      "body": "## Goal\nAdd reviewable evidence links for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Show inputs and assumptions behind each exposure.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `src/review.py`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nA reviewer can trace any aggregate to positions. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-016 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M5",
+      "depends_on": [
+        "QR-016"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QR-018",
+      "title": "Add invalid-data gallery",
+      "body": "## Goal\nAdd invalid-data gallery for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Exercise stale, crossed, absent and contradictory inputs.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/failure-gallery.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nEach case has expected safe behavior. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-017 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M5",
+      "depends_on": [
+        "QR-017"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QR-019",
+      "title": "Measure bounded performance",
+      "body": "## Goal\nMeasure bounded performance for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Record p50/p95 latency and peak RAM on local machine.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `benchmarks/local.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nHardware, book size and command are reproducible. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-018 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M5",
+      "depends_on": [
+        "QR-018"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QR-020",
+      "title": "Package offline runs",
+      "body": "## Goal\nPackage offline runs for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Provide installable CLI and deterministic sample command.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `README.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nClean environment reproduces example output. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-019 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M5",
+      "depends_on": [
+        "QR-019"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:reliability"
+      ],
+      "phase": "reliability"
+    },
+    {
+      "id": "QR-021",
+      "title": "Test user review workflow",
+      "body": "## Goal\nTest user review workflow for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Observe a small task using synthetic positions, without return claims.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/workflow.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nTime and errors are recorded with participant caveat. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-020 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M6",
+      "depends_on": [
+        "QR-020"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QR-022",
+      "title": "Document operating limits",
+      "body": "## Goal\nDocument operating limits for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Describe model risk, quote rights and exercise-style limits.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/LIMITATIONS.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nUnsupported use is visible at entry point. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-021 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M6",
+      "depends_on": [
+        "QR-021"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QR-023",
+      "title": "Write portfolio case study",
+      "body": "## Goal\nWrite portfolio case study for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Explain architecture, alternatives, measured results and failures.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `reports/case-study.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nEvery claim links to a reproducible artifact. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-022 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M6",
+      "depends_on": [
+        "QR-022"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    },
+    {
+      "id": "QR-024",
+      "title": "Decide product next step",
+      "body": "## Goal\nDecide product next step for Risk Ledger, within 8 hours including checks and documentation.\n\n## Steps\n1. Record continue, narrow or park based on workflow evidence.\n2. Check the product boundary: Local review of a hypothetical options portfolio: load positions, inspect priced exposures, apply spot and volatility shocks, explain stale or invalid inputs, export evidence. This is a prototype, not live risk control or investment advice.\n3. Record exact commands, versions, seeds, input hashes, failures and actual time.\n\n## Outputs\nFuture repository artifact: `docs/PRODUCT_DECISION.md`. This planning issue does not claim the artifact exists.\n\n## Acceptance checks\nDecision names missing buyer and feed gates. Evidence includes a reproducible command or reviewable document; no result is manufactured during planning.\n\n## Dependencies\nQR-023 Read docs/EXECUTION_PLAN.md and docs/IMPLEMENTER_PROTOCOL.md. Prior milestone exits must pass; this candidate remains queued.\n\n## Review evidence\nAttach the reviewed diff, exact commands and exit codes, relevant report excerpts, input/config hashes, actual hours and reserve draw. Separate measured outcomes from targets. Done requires review and merge.\n\n## Blocker procedure\nRecord the smallest failure and missing prerequisite. Keep dependents queued. Use reserve or propose a narrower scope. Unknown rights block distribution; use generated fallback. Escalate budget, intended-use or release changes before crossing them.",
+      "estimate_hours": 8,
+      "milestone": "QR-M6",
+      "depends_on": [
+        "QR-023"
+      ],
+      "labels": [
+        "type:task",
+        "priority:P2",
+        "status:queued",
+        "phase:release"
+      ],
+      "phase": "release"
+    }
+  ]
+}
